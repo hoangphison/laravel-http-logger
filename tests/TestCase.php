@@ -40,19 +40,19 @@ class TestCase extends Orchestra
 
     protected function getTempDirectory($suffix = '')
     {
-        return __DIR__ . '/temp' . ($suffix == '' ? '' : $this->uri . $suffix);
+        return __DIR__.'/temp'.($suffix == '' ? '' : $this->uri.$suffix);
     }
 
     protected function getTempFile()
     {
-        $path = $this->getTempDirectory() . '/test.md';
+        $path = $this->getTempDirectory().'/test.md';
         file_put_contents($path, 'Hello');
         return $path;
     }
 
     protected function getLogFile()
     {
-        return $this->getTempDirectory() . '/http-logger.log';
+        return $this->getTempDirectory().'/http-logger.log';
     }
 
     protected function readLogFile()
