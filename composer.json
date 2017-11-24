@@ -1,11 +1,12 @@
 {
-    "name": "spatie/laravel-http-logger",
+    "name": "hoangphison/laravel-http-logger",
     "description": "A Laravel 5 package to log HTTP requests",
     "keywords": [
+        "hoangphison",
         "spatie",
         "laravel-http-logger"
     ],
-    "homepage": "https://github.com/spatie/laravel-http-logger",
+    "homepage": "https://github.com/hoangphison/laravel-http-logger",
     "license": "MIT",
     "authors": [
         {
