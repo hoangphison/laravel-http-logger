@@ -10,16 +10,15 @@ class HttpLoggerServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/http-logger.php' => config_path('http-logger.php'),
+                __DIR__ . '/../config/http-logger.php' => config_path('http-logger.php'),
             ], 'config');
         }
-
         $this->app->singleton(LogProfile::class, config('http-logger.log_profile'));
         $this->app->singleton(LogWriter::class, config('http-logger.log_writer'));
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/http-logger.php', 'http-logger');
+        $this->mergeConfigFrom(__DIR__ . '/../config/http-logger.php', 'http-logger');
     }
 }

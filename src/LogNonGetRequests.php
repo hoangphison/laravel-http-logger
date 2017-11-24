@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LogNonGetRequests implements LogProfile
 {
-    public function shouldLogRequest(Request $request): bool
+    public function shouldLogRequest(Request $request)
     {
         return in_array(strtolower($request->method()), ['post', 'put', 'patch', 'delete']);
     }

@@ -20,7 +20,7 @@ class DefaultLogWriter implements LogWriter
             return $file->path();
         }, iterator_to_array($request->files));
 
-        $message = "{$method} {$uri} - Body: {$bodyAsJson} - Files: ".implode(', ', $files);
+        $message = "{$method} {$uri} - Body: {$bodyAsJson} - Files: " . implode(', ', $files);
 
         Log::info($message);
     }
