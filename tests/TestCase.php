@@ -38,31 +38,29 @@ class TestCase extends Orchestra
         File::makeDirectory($directory);
     }
 
-    protected function getTempDirectory($suffix = ''): string
+    protected function getTempDirectory($suffix = '')
     {
-        return __DIR__.'/temp'.($suffix == '' ? '' : $this->uri.$suffix);
+        return __DIR__ . '/temp' . ($suffix == '' ? '' : $this->uri . $suffix);
     }
 
-    protected function getTempFile(): string
+    protected function getTempFile()
     {
-        $path = $this->getTempDirectory().'/test.md';
-
+        $path = $this->getTempDirectory() . '/test.md';
         file_put_contents($path, 'Hello');
-
         return $path;
     }
 
-    protected function getLogFile(): string
+    protected function getLogFile()
     {
-        return $this->getTempDirectory().'/http-logger.log';
+        return $this->getTempDirectory() . '/http-logger.log';
     }
 
-    protected function readLogFile(): string
+    protected function readLogFile()
     {
         return file_get_contents($this->getLogFile());
     }
 
-    protected function getPackageProviders($app): array
+    protected function getPackageProviders($app)
     {
         return [
             HttpLoggerServiceProvider::class,
@@ -91,14 +89,14 @@ class TestCase extends Orchestra
     }
 
     protected function makeRequest(
-        string $method,
-        string $uri,
+        $method,
+        $uri,
         array $parameters = [],
         array $cookies = [],
         array $files = [],
         array $server = [],
         $content = null
-    ): Request {
+    ) {
         $files = array_merge($files, $this->extractFilesFromDataArray($parameters));
 
         return Request::createFromBase(
