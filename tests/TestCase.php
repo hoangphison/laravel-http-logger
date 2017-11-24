@@ -47,6 +47,7 @@ class TestCase extends Orchestra
     {
         $path = $this->getTempDirectory().'/test.md';
         file_put_contents($path, 'Hello');
+
         return $path;
     }
 
