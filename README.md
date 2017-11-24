@@ -1,10 +1,7 @@
 # Log HTTP requests
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-http-logger.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-http-logger)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-http-logger/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-http-logger)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/283d29cf-1b0c-422c-acfb-d3d6cd12b514.svg?style=flat-square)](https://insight.sensiolabs.com/projects/283d29cf-1b0c-422c-acfb-d3d6cd12b514)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-http-logger.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-http-logger)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-http-logger.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-http-logger)
+[![Build Status](https://travis-ci.org/hoangphison/laravel-http-logger.svg?branch=master)](https://travis-ci.org/hoangphison/laravel-http-logger)
+[![StyleCI](https://styleci.io/repos/107355799/shield?branch=master)](https://styleci.io/repos/107355799)
 
 This package adds a middleware which can log incoming requests to the default log. 
 If anything goes wrong during a user's request, you'll still be able to access the original request data sent by that user.
@@ -16,7 +13,7 @@ This log acts as an extra safety net for critical user submissions, such as form
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-http-logger
+composer require hoangphison/laravel-http-logger
 ```
 
 Optionally you can publish the configfile with:
